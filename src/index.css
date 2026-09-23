@@ -1,13 +1,31 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+
+.App {
+  height: 100vh;
+  font-family: "Merriweather", serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.light {
+  background-image: url('./../public/img/themes/day-theme.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #000000;
+}
+
+.dark {
+  background-image: url('./../public/img/themes/night-theme.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #FFFFFF;
 }
