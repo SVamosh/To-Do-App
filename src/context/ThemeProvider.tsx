@@ -1,20 +1,10 @@
 
-import React, { useState, useEffect, createContext, useContext, Dispatch } from "react";
-
-type Theme = "light" | "dark";
-
-type MyContextType = {
-    theme: Theme;
-    setTheme: Dispatch<React.SetStateAction<Theme>>;
-}
-
-type ThemeProviderProps = {
-    children: React.ReactNode;
-}
+import { useState, useEffect, createContext, useContext, type FC } from "react";
+import type { Theme, MyContextType, ThemeProviderProps } from "../services/interfaces";
 
 export const ThemeContext = createContext<MyContextType | undefined>(undefined);
 
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
+export const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
     const [theme, setTheme] = useState<Theme>("light");
 
     useEffect(() => {
