@@ -1,6 +1,6 @@
 
 import React from "react";
-import Clock from "./components/Clock";
+import Main from "./components/Main";
 import Header from "./components/Header";
 import { ThemeProvider } from "./context/ThemeProvider";
 
@@ -9,7 +9,7 @@ function App() {
     <ThemeProvider>
       <div className="App">
         <Header />
-        <Clock />
+        <Main />
       </div>
     </ThemeProvider>
   );
